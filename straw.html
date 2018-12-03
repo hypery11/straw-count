@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2018 by anonymous (http://jsbin.com/voyegabego/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src=https://inorganik.github.io/countUp.js/countUp.js></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+  <title>Straw Counter</title>
+<style id="jsbin-css">
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 110%;
+    min-height: 110%;
+    z-index: -1;
+    -webkit-filter: blur(5px) 
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;  
+}
+
+
+
+/*-----------------------------------*\
+  $RESET
+\*-----------------------------------*/
+
+*, :before, :after {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+input, select, button, textarea {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+
+  font: inherit;
+  color: inherit;
+}
+
+/*-----------------------------------*\
+  $OBJECTS
+\*-----------------------------------*/
+
+.butt, .input {
+  padding: .75rem;
+  margin: .375rem;
+
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+  .butt:focus, .input:focus {
+    outline: none;
+  }
+
+.butt {
+  border: 2px solid #f35626;
+  line-height: 1.375;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  font-weight: 700;
+
+  color: #f35626;
+
+  cursor: pointer;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+  .butt--primary {
+    background-color: #f35626;
+    color: #fff;
+  }
+
+.input {
+  border: 1px solid #c0c8c9;
+  border-radius: 4px;
+}
+
+
+/*-----------------------------------*\
+  $TYPOGRAPHY
+\*-----------------------------------*/
+
+h1, .alpha {
+  margin-bottom: 1.5rem;
+
+  font-size: 3rem;
+  font-weight: 100;
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+h2, .beta {
+  margin-bottom: .75rem;
+
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+@media (min-width: 650px) {
+  .mega {
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
+.subhead, .meta {
+  color: #7b8993;
+}
+
+.promo {
+  text-align: center;
+}
+
+p, hr, form {
+  margin-bottom: 1.5rem;
+}
+
+hr {
+  border: none;
+  margin-top: -1px;
+  height: 1px;
+  background-color: #c0c8c9;
+  background-image: -webkit-linear-gradient(0deg, #fff, #c0c8c9, #fff);
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  -webkit-animation: hue 60s infinite linear;
+}
+
+  a:hover {
+    color: #f35626;
+  }
+
+/*-----------------------------------*\
+  $LAYOUT
+\*-----------------------------------*/
+
+.wrap {
+  max-width: 38rem;
+  margin: 0 auto;
+}
+
+.island {
+  padding: 1.5rem;
+}
+
+.isle {
+  padding: .75rem;
+}
+
+.spit {
+  padding: .375rem;
+}
+
+/*-----------------------------------*\
+  $BASE
+\*-----------------------------------*/
+
+html {
+  font: 100%/1.5 "Roboto", Verdana, sans-serif;
+  color: #e0e0d1;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+
+  overflow: hidden-x;
+
+  /* Centering in The Unknown */
+  text-align: center;
+}
+
+@media (min-width: 650px) {
+  html {
+    height: 100%;
+  }
+
+  html:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+  body {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 38rem;
+  }
+}
+
+/*-----------------------------------*\
+  $HEADER
+\*-----------------------------------*/
+
+.site__header {
+  -webkit-animation: bounceInUp 1s;
+}
+
+  .site__title {
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+  }
+
+.site__content {
+  -webkit-animation: bounceInUp 1s;
+  -webkit-animation-delay: .1s;
+}
+
+  .site__content form {
+    -webkit-animation: bounceInUp 1s;
+    -webkit-animation-delay: .1s;
+  }
+
+/*-----------------------------------*\
+  $ANIMATIONS
+\*-----------------------------------*/
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+</style>
+</head>
+<body>
+
+<h1 class="animated fadeIn delay-1s">
+  let's show you how many straw abandoned
+</h1>
+
+
+<h1>
+  <div class="animated fadeIn delay-2s" id=myTargetElement></div>
+</h1>
+
+<h1>
+  <div class="animated fadeIn delay-3s" id=myTargetElement>after the speech</div>
+</h1>
+
+<h1>
+  <a class="animated fadeIn delay-4s" onclick="start_count()"> GO! </a>
+</h1>
+
+<video autoplay muted loop id="myVideo">
+  <source src="https://static.videezy.com/system/resources/previews/000/007/251/original/P6080270.mp4" type="video/mp4">
+</video>
+  
+<script id="jsbin-javascript">
+var options = {  
+  useEasing: true,
+    useGrouping: true,
+    separator: ',',
+    decimal: '.',
+};
+var demo = new CountUp('myTargetElement', 0, 5787, 0, 2, options);
+
+
+
+
+function start_count() {
+var a = new Date();
+
+  if (!demo.error) {
+    demo.start();
+
+    var turtle_kill = setInterval(function() {
+      var n = (new Date() - a) / 1000;
+      console.clear();
+      console.log(n);
+      demo.update(5787 * (n + 1));
+    }, 3000);
+
+  } else {
+    console.error(demo.error);
+  }
+}
+</script>
+</body>
+</html>
