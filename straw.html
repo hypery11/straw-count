@@ -262,7 +262,7 @@ html {
 <body>
 
 <h1 class="animated fadeIn delay-4s">
-  Now, _ seconds past.
+  Now, <div id=secs></div> seconds past.
 </h1>
 
 <h1>
@@ -289,7 +289,7 @@ var options = {  
     separator: ',',
     decimal: '.',
 };
-var demo = new CountUp('myTargetElement', 0, 5787, 0, 2, options);
+var demo = new CountUp('myTargetElement', 0, 0, 0, 2, options);
 
 
 
@@ -302,10 +302,13 @@ var a = new Date();
 
     var turtle_kill = setInterval(function() {
       var n = (new Date() - a) / 1000;
-      console.clear();
-      console.log(n);
-      demo.update(5787 * (n + 1));
+      demo.update(5787 * n);
     }, 3000);
+
+    var sec_update = setInterval(function() {
+      var n = (new Date() - a) / 1000;
+      document.getElementById('secs').innerHTML=n;
+    }, 1000);
 
   } else {
     console.error(demo.error);
