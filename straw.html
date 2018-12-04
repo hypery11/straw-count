@@ -262,21 +262,21 @@ html {
 <body>
 
 <h1 class="animated fadeIn delay-1s">
-  let's show you how many straw abandoned
+  Now, _ seconds past.
 </h1>
 
+<h1>
+  <div class="animated fadeIn delay-3s">There were </div>
+</h1>
 
 <h1>
   <div class="animated fadeIn delay-2s" id=myTargetElement></div>
 </h1>
 
 <h1>
-  <div class="animated fadeIn delay-3s" id=myTargetElement>after the presentation</div>
+  <div class="animated fadeIn delay-3s"> plastic straws been abandoned since this presentation started.</div>
 </h1>
 
-<h1>
-  <a class="animated fadeIn delay-4s" onclick="start_count()"> GO! </a>
-</h1>
 
 <video autoplay muted loop id="myVideo">
   <source src="https://www.nationalgeographic.com/interactive-assets/nggraphics/ngm-plastics/build-2018-05-24_10-32-58/ngm-assets/video/manta.mp4" type="video/mp4">
@@ -311,6 +311,8 @@ var a = new Date();
     console.error(demo.error);
   }
 }
+  
+  window.onload=function(){start_count();};
 </script>
 </body>
 </html>
