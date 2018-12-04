@@ -262,7 +262,7 @@ html {
 <body>
 
 <h1 class="animated fadeIn delay-4s">
-  Now, <div id=secs></div> seconds past.
+  Now, <text id=secs></text> seconds past.
 </h1>
 
 <h1>
@@ -307,7 +307,7 @@ var a = new Date();
 
     var sec_update = setInterval(function() {
       var n = (new Date() - a) / 1000;
-      document.getElementById('secs').innerHTML=n;
+      document.getElementById('secs').innerHTML=Math.round(n);
     }, 1000);
 
   } else {
